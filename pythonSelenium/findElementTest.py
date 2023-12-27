@@ -22,6 +22,8 @@ for country in countries:
         country.click()
         break
 
-
+# print(driver.find_element(By.ID, "autosuggest").text) It won't print because it's written by us dinamically not present in website already
+# print(driver.find_element(By.ID, "autosuggest").get_attribute("value"))
+assert driver.find_element(By.ID, "autosuggest").get_attribute("value") == "India"
 
 
